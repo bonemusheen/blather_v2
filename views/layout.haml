@@ -1,0 +1,8 @@
+!!! 5
+%html{ lang: "eng" }
+  %head
+    %meta{ charset: "utf-8" }
+    %title= full_title(locals[:title])
+    %link{ rel: "stylesheet", type: "text/css", href: "css/style.css" }
+  %body
+    = yield

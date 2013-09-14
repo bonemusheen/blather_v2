@@ -18,6 +18,7 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.0)
     atomic (1.1.13)
+    bcrypt-ruby (3.1.2)
     bootstrap-sass (2.3.2.1)
       sass (~> 3.2)
     builder (3.1.4)
@@ -89,6 +90,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord (= 4.0.0)
+  bcrypt-ruby (= 3.1.2)
   bootstrap-sass (= 2.3.2.1)
   capybara (= 2.1.0)
   coffee-script (= 2.2.0)

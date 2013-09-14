@@ -10,6 +10,7 @@ gem "coffee-script", "2.2.0"
 gem "rake", "10.1.0"
 gem "activerecord", "4.0.0"
 gem "rack-ssl", "1.3.3"
+gem "bcrypt-ruby", "3.1.2"
 
 group :development, :test do
   gem "sqlite3", "1.3.8"
