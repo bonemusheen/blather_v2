@@ -13,3 +13,4 @@ doc/
 .idea
 .secret
 .rvmrc
+.sass-cache

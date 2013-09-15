@@ -1,5 +1,6 @@
 require_relative "config/environment"
 require "haml"
+require "sass"
 require "sinatra"
 
 set :port, ENV["PORT"] || 4567
@@ -29,6 +30,10 @@ helpers do
       base_title
     end
   end
+end
+
+get "/style.css" do
+  scss :style, views: "#{settings.root}/public/css"
 end
 
 get "/" do

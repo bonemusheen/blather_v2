@@ -3,6 +3,19 @@
   %head
     %meta{ charset: "utf-8" }
     %title= full_title(locals[:title])
-    %link{ rel: "stylesheet", type: "text/css", href: "css/style.css" }
+    %link{ rel: "stylesheet", type: "text/css", href: "style.css" }
+    %link{ rel: "stylesheet", type: "text/css", href: "css/bootstrap.min.css" }
+    /[if lt IE 9]
+      %script{ src: "http://html5shim.googlecode.com/svn/trunk/html5.js" }
   %body
-    = yield
+    %header.navbar.navbar-fixed-top.navbar-inverse
+      .navbar-inner
+        .container
+          %a#logo{ href: "#" } Blather!
+          %nav
+            %ul.nav.pull-right
+              %li
+                %a.nav-links{ href: "/signin" } Sign in
+    .container
+      = yield
+    %script{ src: "/js/bootstrap.min.js" }
