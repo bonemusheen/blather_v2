@@ -6,15 +6,13 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require "rack/test"
 require "capybara"
+require "database_cleaner"
 include Rack::Test::Methods
-include Capybara::DSL
 Capybara.default_driver = :selenium
 
 def app
   Sinatra::Application
 end
-
-set :environment, :test
 
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
@@ -26,4 +24,17 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = 'random'
+  config.include Capybara::DSL
+
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :truncation
+  end
+
+  config.before(:each) do
+    DatabaseCleaner.start
+  end
+
+  config.after(:each) do
+    DatabaseCleaner.clean
+  end
 end

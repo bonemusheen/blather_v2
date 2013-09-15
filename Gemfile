@@ -10,7 +10,7 @@ gem "coffee-script", "2.2.0"
 gem "rake", "10.1.0"
 gem "activerecord", "4.0.0"
 gem "rack-ssl", "1.3.3"
-gem "bcrypt-ruby", "3.1.2"
+gem "bcrypt-ruby", "3.0.1"
 gem "fileutils", "0.7"
 
 group :development, :test do
@@ -21,6 +21,7 @@ group :test do
   gem "rspec", "2.14.1"
   gem "selenium-webdriver", "2.35.0"
   gem "capybara", "2.1.0"
+  gem "database_cleaner", "1.0.1"
 end
 
 group :production do

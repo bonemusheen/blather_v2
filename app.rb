@@ -1,4 +1,5 @@
 require_relative "config/environment"
+require "haml"
 require "sinatra"
 
 set :port, ENV["PORT"] || 4567

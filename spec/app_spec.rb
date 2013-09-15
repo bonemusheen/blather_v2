@@ -1,3 +1,4 @@
+ENV["RACK_ENV"] = "test"
 require_relative "../app.rb"
 require "spec_helper.rb"
 

@@ -1,4 +1,5 @@
 # from gist:4654659 by thil (https://gist.github.com/thil/4654659)
+# slightly modified
 
 require 'active_record'
 require 'fileutils'
