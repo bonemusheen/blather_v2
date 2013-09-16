@@ -33,6 +33,15 @@ describe User do
     it { should_not be_valid }
   end
 
+  describe "when name is already taken" do
+    before do
+      user_with_same_name = @user.dup
+      user_with_same_name.save
+    end
+
+    it { should_not be_valid }
+  end
+
   describe "when email format is invalid" do
     it "should be invalid" do
       addresses = %w[user@foo,com user at foo.org example.user@foo.

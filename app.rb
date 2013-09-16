@@ -1,3 +1,5 @@
+ENV["RACK_ENV"] = "test"
+
 require_relative "config/environment"
 require_relative "config/secure_token"
 require "haml"
@@ -7,7 +9,6 @@ require "rack-flash"
 require "sinatra/redirect_with_flash"
 
 set :port, ENV["PORT"] || 4567
-#set :environment, :test
 
 configure :production do
   require "rack/ssl"
