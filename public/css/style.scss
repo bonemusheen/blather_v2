@@ -1,5 +1,11 @@
 $lightGray: #999;
 
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: '1942Report';
   src: url('fonts/1942-webfont.eot');
@@ -68,7 +74,7 @@ p {
 #logo {
   float: left;
   margin-right: 10px;
-  font-family: "1942Report";
+  font-family: "1942Report", Arial, sans-serif;
   font-size: 2em;
   color: #fff;
   letter-spacing: -1px;
@@ -84,4 +90,33 @@ p {
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   border-radius: 7px;
+}
+
+/* Forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+/* Misc */
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
 }

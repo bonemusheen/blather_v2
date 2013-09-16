@@ -1,6 +1,7 @@
 %h1 Blather!
 - if logged_in?
-  %h1= "Welcome #{@user.username}"
+  %h1= "Welcome #{user.name}"
+  = gravatar_for(user)
   %a{ href: "/logout" } Logout
 - else
   %form{ action: "/login", method: "post" }

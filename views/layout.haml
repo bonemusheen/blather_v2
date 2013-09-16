@@ -9,13 +9,18 @@
       %script{ src: "http://html5shim.googlecode.com/svn/trunk/html5.js" }
   %body
     %header.navbar.navbar-fixed-top.navbar-inverse
-      .navbar-inner
-        .container
-          %a#logo{ href: "#" } Blather!
-          %nav
-            %ul.nav.pull-right
-              %li
+      .container
+        %a#logo{ href: "/" } Blather!
+        %nav
+          %ul.nav.pull-right
+            %li
+              - if logged_in?
+                %a.nav-links{ href: "/signout" } Sign out
+              - else
                 %a.nav-links{ href: "/signin" } Sign in
     .container
+      - if flash[:success]
+        .alert.alert-success
+          = flash[:success]
       = yield
     %script{ src: "/js/bootstrap.min.js" }

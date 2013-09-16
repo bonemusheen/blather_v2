@@ -12,6 +12,8 @@ gem "activerecord", "4.0.0"
 gem "rack-ssl", "1.3.3"
 gem "bcrypt-ruby", "3.0.1"
 gem "fileutils", "0.7"
+gem "rack-flash3", "1.0.5"
+gem "sinatra-redirect-with-flash", "0.2.0"
 
 group :development, :test do
   gem "sqlite3", "1.3.8"
